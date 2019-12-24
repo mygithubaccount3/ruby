@@ -5,23 +5,19 @@ class HighScores
     @scores = scores
   end
 
-  def scores
-    @scores
-  end
-
   def latest
-    @scores[-1]
+    scores[-1]
   end
 
   def personal_best
-    @scores.max
+    scores.max
   end
 
   def personal_top_three
-    @scores.max(3)
+    scores.max(3)
   end
 
   def latest_is_personal_best?
-    @scores[-1] == @scores.max
+    scores[-1] == scores.max
   end
 end
